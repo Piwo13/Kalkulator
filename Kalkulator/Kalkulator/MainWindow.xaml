@@ -1,0 +1,94 @@
+﻿<Window x:Class="Kalkulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kalkulator"
+        mc:Ignorable="d"
+        Title="Kalkulator" Height="500" Width="400" ResizeMode="CanMinimize" KeyDown="Window_KeyDown">
+    <Grid Margin="4">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="3.5*"/>
+            </Grid.RowDefinitions>
+
+            <TextBox Grid.Row="0" Name="pamiec"/>
+            <TextBox Grid.Row="1" Name="wejscie"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="clear" Content="CE" Click="Clear_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="1" Name="clearall" Content="C" Click="Clearall_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="2" Name="backspace" Content="Backspace" Click="Backspace_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="3" Name="dzielenie" Content="/" Click="Akcja_click" PreviewKeyDown="Enter_click"/>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="siedem" Content="7" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="1" Name="osiem" Content="8" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="2" Name="dziewiec" Content="9" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="3" Name="mnozenie" Content="*" Click="Akcja_click" PreviewKeyDown="Enter_click"/>
+            </Grid>
+            <Grid Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="cztery" Content="4" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="1" Name="piec" Content="5" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="2" Name="szesc" Content="6" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="3" Name="minus" Content="-" Click="Akcja_click" PreviewKeyDown="Enter_click"/>
+            </Grid>
+            <Grid Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="jeden" Content="1" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="1" Name="dwa" Content="2" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="2" Name="trzy" Content="3" Click="Numer_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="3" Name="dodawanie" Content="+" Click="Akcja_click" PreviewKeyDown="Enter_click"/>
+            </Grid>
+            <Grid Grid.Row="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="negacja" Content="+/-" Click="Negacja_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="1" Name="zero" Content="0" Click="Zero_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="2" Name="kropka" Content="," Click="Kropka_click" PreviewKeyDown="Enter_click"/>
+                <Button Grid.Column="3" Name="rownanie" Content="=" Click="Akcja_click" PreviewKeyDown="Enter_click"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>
